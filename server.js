@@ -130,6 +130,9 @@ db.all("SELECT marque, modele FROM voitures ORDER BY marque, modele", (err, rows
 /* =====================
    LANCEMENT SERVEUR
 ===================== */
-app.listen(3000, () => {
+
+const port  = process.env.PORT || 3000
+
+app.listen(port, () => {
   console.log("Serveur lancé sur http://127.0.0.1:3000");
 });
